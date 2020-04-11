@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		
+		header .container{
+	-webkit-display: flex;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+	background-color: white;
+}
+
+.nav{
+	font-family: Roboto Condensed;
+	position: fixed;
+	color: black;
+	width: 280px;
+	top:0;
+	left:0;
+	height: 100%;
+	z-index: 99;
+	padding:20px 25px 15px; 
+	-webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
+    display: none;
+    background: transparent;
+    transform: translateY(105px);
+}
+
+header .nav ul{
+	list-style: none;
+	margin:0;
+	padding:0px;
+}
+
+header .nav ul li{
+display: block;
+border:3px solid black;
+background-color: #E8D8A2;
+border-radius: 50px;
+margin-bottom: 20px;
+}
+
+header .nav ul li a{
+
+	text-align: center;
+	text-decoration: none;
+	font-size: 29.5px;
+	font-weight: 400;
+    color:black;
+    display: block;
+    position: relative;
+    padding:10px 30px;
+}
+header .nav ul li:hover{
+	box-shadow: 0px 0px 20px white;
+	transition-duration:0.2s; 
+	transform: scale(1.1);
+
+}
+
+
+header .nav ul li.active::after{
+	content: '';
+	position: absolute;
+	left:0px;
+	top:0px;
+	height: 100%;
+	width:100%;
+	background-color:#000000;
+	opacity:1;
+	-webkit-transition: width .5s ease;
+	transition: width .5s ease;
+	z-index: -1;
+}
+header .nav ul li a:hover::after{
+	width: 100%;
+}
+header .ham-burger{
+	transform: translateX(120px);
+	display: inline-block;
+	position: relative;
+	z-index: 100;
+	
+}
+.headwrap{
+	
+height: 100px;
+}
+
+.logo { 
+	
+	height: 90px;
+	width:150px;
+	margin-top: 0px;
+	display: inline-block;
+	transform: translateX(-45px);
+
+}
+body{
+	background-color:  black;
+}
+
+	</style>
+</head>
+<body>
+
+	<header class="headwrap">
+		<div class="container">
+	 	 	<div class="ham-burger"><a href="javascript:void(0)" >
+		 	 <!--    <span></span>
+		        <span></span>
+		        <span></span> -->
+		        <img src="21.png" style="height: 100px;width: 100px;">
+	 	 	</a></div>
+	 	 	<div class="nav">
+	 	 		<ul>
+	 	 			<li><a href="WT-Project.html">Home</a></li>
+	 	 			<li><a href="aboutus.html">About Us</a></li>
+	 	 			<li><a href="our story.html">Our Story</a></li>
+	 	 			<li><a href="rooms.html">Rooms</a></li>
+	 	 			<li><a href="m&e.html">Meetings & Events</a></li>
+	 	 			<li><a href="experience.html">Experience</a></li>
+	 	 			<li><a href="contactus.html">Contact Us</a></li>
+	 	 		</ul>
+	 	 	</div>
+	 	 	<div class="logo">
+	 	 		 <img src="saavajresort.png" class="logo">
+	 	 	</div>
+ 		</div>
+
+	</header>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</script>
+<script>
+	$(document).ready(function(){
+      $(".ham-burger").click(function(){
+        $(".nav").slideToggle("slow");
+      }); 
+});
+</script>
+</body>
+</html>

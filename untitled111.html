@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Saavaj Resort</title>
+    <script type="text/javascript" src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+    <script type="text/javascript" src="untitled.js"></script>
+
+    <style type="text/css">
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+
+            width: 100%;
+            height: 100%;
+            background-color: #C6B270
+                /*#E8D8A2*/
+            ;
+            margin: 0;
+            padding: 100;
+            overflow-x: hidden;
+            font-family: Mukta Mahee;
+        }
+
+
+
+        .mySlides {
+            display: none;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 70%;
+            height: 600px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            border: 1px white solid;
+        }
+
+        .abc {
+
+            position: relative;
+            transform: translate(0px, -80px);
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
+
+
+
+      
+       
+
+        .column {
+            float: left;
+            width: 20%;
+            padding: 0px;
+            height: 900px;
+            background-color: white;
+            margin: 20px;
+            font-size: 23px;
+            color: grey;
+
+
+
+        }
+
+        .column p {
+            padding: 20px 20px;
+            text-align: justify;
+            transform: translate(0px, -55px);
+
+        }
+
+        .column div {
+            transform: translate(-5px, -35px);
+            background-color: #E8D8A2;
+            padding: 0px 10px;
+            font-size: 25px;
+            color: black;
+            width: 250px;
+
+
+
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+
+        }
+
+        .row {
+            display: inline-block;
+            transform: translate(325px, 0px);
+
+        }
+
+        .button {
+            background-color: #E8D8A2;
+            color: black;
+            border: 3px solid black;
+            vertical-align: center;
+            text-decoration: none;
+            font-size: 25px;
+            font-family: Mukta Mahee;
+            font-weight: bold;
+            height: 15px;
+            width: auto;
+            padding: 0px 10px;
+            position: relative;
+            top: 142px;
+            left: 1049px;
+        }
+
+        .button:hover {
+            background-color: black;
+            color: white;
+        }
+
+        .b {
+            width: 100%;
+            height: fit-content;
+            position: relative;
+        }
+
+        .b::before {
+            background: url("111.png") no-repeat fixed center;
+            background-size: 50%;
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            opacity: 0.3;
+        }
+
+        .b div {
+            
+            position: relative;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(function(){
+        $("#header").load("/Users/mysterious/Desktop/WT Project/header.html");
+      
+      }); 
+</script>   
+    <div class="b">
+            <div class="slideshow-container">
+
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="RECEPTION.jpg" style="width:100%;  height: 600px;">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="PARKING-1.jpg" style="width:100%;  height: 600px;">
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="LUXURY COTTAGE-7.jpg" style="width:100%;  height: 600px;">
+                </div>
+
+            </div>
+            <br>
+
+            <div style="text-align:center" class="abc">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+
+            <script>
+                var slideIndex = 0;
+                showSlides();
+
+                function showSlides() {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slideIndex++;
+                    if (slideIndex > slides.length) { slideIndex = 1 }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                    setTimeout(showSlides, 1000); // Change image every 3 seconds
+                }
+            </script>
+
+            <center>
+                <div>
+                    <div>
+                        <span
+                            style="height: 40px;font-size: 40px;color: black;background-color: white; margin-top: 100px; padding: 0px 20px;">
+                            'Saavaj' in the local language directly translates to 'Lion'!
+                        </span>
+                    </div>
+                    <div>
+                        <p style="width: 60%; text-align: justify; font-size: 25px;">
+                            As the people in Sasan Gir region live in complete harmony with the 'Saavaj' and Lion-
+                            sightings
+                            are a daily affair for them, our resort conceptualizes on this beautiful ecosystem and lets
+                            the
+                            guests experience its essence when they visit Sasan Gir. Since a decade, we continue to
+                            bring a
+                            natural experience for our guests to immerse in a serene surroundings and experience the
+                            magic f
+                            nature in the truest sense. 'Saavaj Resort' is the only resort in Sasan Gir area to offer a
+                            complete package to the travellers- whether you are a nature lover or a luxury lover, we
+                            have
+                            the perfect blend for you. To enhance the experience during your stay with us, we offer
+                            various
+                            indigenous experiences which are beginning to be lost with the generation of today. From
+                            farm
+                            experiences to organic food production, Saavaj lets you experience it all.
+                        </p>
+                    </div>
+
+                    <div class="container">
+
+                        <div class="row">
+                            <center>
+                                <div class="column" data-aos="fade-up">
+                                    <center>
+                                        <img src="IMG_20191118_153731_edited1.jpg" width="100%" height="500px">
+                                        <div>Fruit Picking</div>
+                                        <p>
+                                            Saavaj Resorts offers an exquisite experience of Fruit-picking when
+                                            harvesting
+                                            season is going on. In addition to this, acres of farmlands are available
+                                            for
+                                            guests to experience which include variety of fruits and vegetation
+                                            including
+                                            Papaya, Banana, Coconut, Chikoo and many more.
+                                        </p>
+                                    </center>
+                                </div>
+                                <div class="column" data-aos="fade-up">
+                                    <center>
+                                        <img src="saavaj-resort_dhamal dance1.jpg" width="100%" height="500px">
+                                        <div>Cultural Performance</div>
+                                        <p>
+                                            Local members of the community who were initially brought to India by the
+                                            then
+                                            Emperor as domestic help, set up performances for our guests on a daily
+                                            basis in
+                                            the amphitheater available in the resort premise. Saavaj Resort does not
+                                            charge
+                                            anything for this performance and it is free of cost.
+                                        </p>
+                                    </center>
+                                </div>
+                                <div class="column" data-aos="fade-up">
+                                    <center>
+                                        <img src="SWIMMING POOL-2_resize1.jpg" width="100%" height="500px">
+                                        <div>Natural Water Pool</div>
+                                        <p>
+                                            A fully-shaded pool is provided to the guests to enjoy water activities with
+                                            their loved ones. The speciality of the pool is that it runs on a
+                                            Zero-wastage
+                                            method and uses pure ground water without any chlorine. To maintain hygiene,
+                                            the
+                                            water is drained out daily in our farms for irrigation purposes.
+                                        </p>
+                                    </center>
+                                </div>
+                            </center>
+                        </div>
+
+                    </div>
+                    <div style="margin: 50px 0px;">
+                        <span
+                            style="height: 40px;font-size: 40px;color: black;background-color: white; margin-top: 200px; padding: 0px 20px;">
+                            Saavaj Resort offers FREE-STAYS to all girl guests below 18 years
+                        </span>
+                    </div>
+                    <div>
+                        <p style="width: 60%; text-align: justify; font-size: 25px;">
+                            Saavaj Resort is so much more than just accomodation and food, it is an experiential retreat
+                            where travellers immerse in many activities and experience the real flavor of the region.
+                            The
+                            recipe of this memorable stay runs on the love and warmth of Saavaj team, who make the place
+                            feel like home away from home. We have thousands of satisfied and happy guests who support
+                            us
+                            through the journey and make us do even better. We thank each and everyone of them and
+                            invite
+                            them to visit again!
+                        </p>
+                    </div>
+                    <div>
+                        <img src="PARKING-1.jpg" style="width: 65%; height: 650px; padding-bottom: 25px;">
+                    </div>
+                </div>
+            </center>
+
+            <center>
+                <footer>
+
+                    <div style="display: table;clear: both;padding-top: 10px">
+                        <div style="float: left;"><img src="facebook.png"
+                                style="height: 50px;width: 50px; padding: 5px;">
+                        </div>
+                        <div style="float: left;"><img src="tripadvisor.jpg"
+                                style="height: 50px;width: 80px; padding: 5px;">
+                        </div>
+                        <div style="float: left;"><img src="Instagram.png"
+                                style="height: 50px;width: 50px; padding: 5px;">
+                        </div>
+                    </div>
+                    <div style="display: table;clear: both;padding-top: 10px">
+                        <div style="float: left; font-size: 20px;"><img src="Asset 6.png"
+                                style="height: 20px;width: 20px; padding-right: 5px;">+91 87589 90480</div>
+                        <div style="float: left; padding-left: 40px; font-size: 20px;"><img src="Asset 8.png"
+                                style="height: 20px;width: 30px; padding-right: 5px;">sky@gmail.com</div>
+                    </div>
+                    <div style="display: table;clear: both;padding-top: 30px">
+                        <div style="float: left;padding-right: 10px; padding-left: 10px;"><a href=""
+                                style="color:black; text-decoration: none;  font-size: 20px;">Contact Us &nbsp&nbsp
+                                |</a></div>
+                        <div style="float: left;padding-right: 10px; padding-left: 10px;"><a href=""
+                                style="color:black; text-decoration: none; font-size: 20px;">Terms & Conditions
+                                &nbsp&nbsp |</a></div>
+                        <div style="float: left;padding-right: 10px; padding-left: 10px;"><a href=""
+                                style="color:black; text-decoration: none; font-size: 20px;">Reservation Policy
+                                &nbsp&nbsp |</a></div>
+                        <div style="float: left;padding-right: 10px; padding-left: 10px;"><a href=""
+                                style="color:black; text-decoration: none; font-size: 20px;">Privacy policy</a></div>
+                    </div>
+                    <div style="padding-top: 20px">
+                        <img src="tac.jpg" style="height: 200px; width: 200px; padding: 0px; margin: 0px;">
+                    </div>
+
+                </footer>
+            </center>
+        
+
+    </div>
+
+</body>
+
+</html>
